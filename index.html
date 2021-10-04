@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body onload="init()" oncontextmenu="return false;">
+    <h2>Mine Sweeper</h2>
+    <button class= "button button1" onclick="setLevel(4)">Beginner</button>
+    <button class= "button button2" onclick="setLevel(8)">Medium</button>
+    <button class= "button button3" onclick="setLevel(12)">Expert</button>
+
+    
+    <div class="timer">
+        Timer: <span>0</span> 
+        <div class="board"></div>
+
+
+    </div>
+    
+
+    
+
+    <script src="js/main.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>
