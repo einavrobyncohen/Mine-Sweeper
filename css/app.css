@@ -13,10 +13,21 @@ h2 {
     
 }
 
+.lives {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: rgb(20, 66, 107);
+    background-color: rgba(255, 180, 137, 0.575);
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 10px;
+}
+
 .levels{
     margin: auto;
     margin-top: 15px;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 button {
 
@@ -24,6 +35,13 @@ button {
    border: none;
    box-shadow: 5px 2px rgba(128, 128, 128, 0.678);
 
+}
+
+.mood {
+    padding: 10px;
+    font-size: xx-large;
+    background-color: aqua;
+    cursor: pointer;
 }
 
 .timer {
@@ -35,7 +53,7 @@ button {
 }
 
 .timer span {
-    animation:blinkingText 1.2s infinite;
+    animation:blinkingText 1s infinite;
   
 }
   
@@ -61,6 +79,7 @@ table{
     text-align: center;
     font-size: 1.5em;
     display: inline-block;
+    cursor: pointer;
 }
 
 .hidden {
@@ -72,3 +91,9 @@ table{
     background-color: rgb(159, 252, 171);
 }
 
+p {
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
+}
