@@ -9,20 +9,21 @@
 </head>
 <body onload="init()" oncontextmenu="return false;">
     <h2>Mine Sweeper</h2>
-    <button class= "button button1" onclick="setLevel(4)">Beginner</button>
-    <button class= "button button2" onclick="setLevel(8)">Medium</button>
-    <button class= "button button3" onclick="setLevel(12)">Expert</button>
 
-    
+
     <div class="timer">
         Timer: <span>0</span> 
+        <div class="levels">
+            <button class= "button button1" onclick="setLevel(4)">Beginner</button>
+            <button class= "button button2" onclick="setLevel(8)">Medium</button>
+            <button class= "button button3" onclick="setLevel(12)">Expert</button>
+        </div>
         <div class="board"></div>
+
+        <div class="modal"></div>
 
 
     </div>
-    
-
-    
 
     <script src="js/main.js"></script>
     <script src="js/utils.js"></script>

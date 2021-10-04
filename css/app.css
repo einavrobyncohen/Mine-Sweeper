@@ -1,24 +1,58 @@
-h2 {
-    text-align: center;
-    color: red;
+* {
+    box-sizing: border-box;
 }
 
+body {
+    background-color: lightgoldenrodyellow;
+}
+h2 {
+    font-family: fantasy;
+    font-size: xx-large;
+    text-align: center;
+    color: rgb(48, 224, 186);
+    
+}
+
+.levels{
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 button {
 
    text-align: center;
+   border: none;
+   box-shadow: 5px 2px rgba(128, 128, 128, 0.678);
 
 }
 
 .timer {
+    font-family:'Courier New', Courier, monospace;
     text-align: center;
     margin-bottom: 10px;
 
     
 }
 
+.timer span {
+    animation:blinkingText 1.2s infinite;
+  
+}
+  
+@keyframes blinkingText{
+    0%{     color: rgb(0, 0, 0);    }
+    49%{    color: rgb(0, 0, 0) }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: rgb(0, 0, 0);    }
+}
+
 
 table{
     margin: auto;
+    background-color: white;
+    opacity: 0.8;
+    border: 1px solid rgb(164, 189, 135);
 }
 
 .cell {
@@ -35,6 +69,6 @@ table{
 }
 
 .shown {
-    background-color: rgb(192, 206, 206);
+    background-color: rgb(159, 252, 171);
 }
 
