@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body onload="init()" oncontextmenu="return false;">
     <h2>Mine Sweeper</h2>
 
     <div class="lives">
         lives: <span class="life life1">💙</span><span class="life life2">💙</span><span class="life life3">💙</span>
+        |<span onclick="hint(this)" class="hint hint1">💡</span><span onclick="hint(this)"
+            class="hint hint2">💡</span><span onclick="hint(this)" class="hint hint3">💡</span>
+        |<button class="safeclick" onclick="safeClick()">safe click<div class="available"></button>
+        <div class="left" style="display: inline;"><span class="clicksleft"> 3 </span>left</div>
     </div>
+
     <div class="timer">
-        Timer: <span>0</span> 
+        Timer: <span>0</span>
 
         <div class="levels">
-            <button class= "button button1" onclick="setLevel(4)">Beginner</button>
-            <button class= "button button2" onclick="setLevel(8)">Medium</button>
-            <button class= "button button3" onclick="setLevel(12)">Expert</button>
+            <button class="level button1" onclick="setLevel(4)">Beginner</button>
+            <button class="level button2" onclick="setLevel(8)">Medium</button>
+            <button class="level button3" onclick="setLevel(12)">Expert</button>
         </div>
+
         <div style="display: inline;" class="lives">
-        <div class="board"></div>
+            <div class="board"></div>
+            <div class="modal"></div>
+        </div>
 
-        <div class="modal"></div>
-
-
-    </div>
-
-    <script src="js/main.js"></script>
-    <script src="js/utils.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/utils.js"></script>
 </body>
 <footer>
     <p style="color:gray"> &#169 Coffeerights- Einav Cohen</p>
 </footer>
+
 </html>
