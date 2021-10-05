@@ -17,3 +17,15 @@ function renderCell(elCell, value) {
     elCell.innerText = value;
     elCell.classList.add('shown');
 }
+
+function getEmptyCells(board) {
+    var emptyCells = []
+    for (var i = 0; i < board.length; i++) {
+      for (var j = 0; j < board[0].length; j++) {
+        if (!board[i][j].isMine) {
+          emptyCells.push({ i: i, j: j })
+        }
+      }
+    }
+    return emptyCells
+}

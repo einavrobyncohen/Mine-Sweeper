@@ -165,16 +165,15 @@ function cellMarked(elCell) {
 
 
 function addMine(num) {
+    var emptyCells = getEmptyCells(gBoard)
     for (var i=0; i<num; i++) {
-        var randRowIdx = getRandomInt(0,gBoard.length);
-        var randColIdx = getRandomInt(0,gBoard[0].length);
-        if (gBoard[randRowIdx][randColIdx].isMine) {
-            i--
-        } else {
-            gBoard[randRowIdx][randColIdx].isMine= true;
-        }
+        var randIdx = getRandomInt(0,emptyCells.length);
+        var emptyCell = emptyCells[randIdx]
+        gBoard[emptyCell.i][emptyCell.j].isMine = true;
+        emptyCells.splice(randIdx,1)
     }
 }
+
 
 function checkVictory() {
     if (gGame.livesCount <1) return;
@@ -218,7 +217,6 @@ function isVictory(isVictory) {
         showModal();
         revealMines();
         resetTimer();
-        gameOver();
     }
 }
 
