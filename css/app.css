@@ -63,7 +63,7 @@ img {
 	color:#837c7c;
 	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	font: size 5 px;
-	padding:6px 10px;
+	padding:4px 12px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
 
@@ -81,7 +81,7 @@ img {
 
 .mood {
     border-radius: 100%;
-    font-size: x-large;
+    font-size: large;
     border: none;
     background-color: rgb(229, 226, 240);
     cursor: pointer;
@@ -109,8 +109,8 @@ table{
 }
 
 .cell {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     text-align: center;
     font-size: 1.5em;
     display: inline-block;
@@ -147,7 +147,7 @@ p {
 	color:#bd8ff1;
 	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	font: size 10px;
-	padding:7px 15px;
+	padding:4px 12px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #e1e2ed;
     
