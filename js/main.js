@@ -5,6 +5,8 @@ const EMPTY = ' '
 const NORMAL = '😃'
 const OISH = '🤯'
 const WIN = '😎'
+const HINT= '<img src="img/hint.png">'
+const HINT_CLICKED = '<img src="img/hintafter.png">'
 
 var gBoard;
 var gGame;
@@ -119,18 +121,6 @@ function cellClicked(elCell, i, j) {
 }
 
 
-
-function addMine(num) {
-    var emptyCells = getEmptyCells(gBoard);
-    for (var i = 0; i < num; i++) {
-        var randIdx = getRandomInt(0, emptyCells.length);
-        var emptyCell = emptyCells[randIdx];
-        gBoard[emptyCell.i][emptyCell.j].isMine = true;
-        emptyCells.splice(randIdx, 1);
-    }
-}
-
-
 function cellMarked(elCell) {
     if (!gGame.isOn) return;
 
@@ -211,6 +201,17 @@ function revealCellsHintMode(elCell, rowIdx, colIdx) {
                 elCell.classList.remove('shown');
             }
         }
+    }
+}
+
+
+function addMine(num) {
+    var emptyCells = getEmptyCells(gBoard);
+    for (var i = 0; i < num; i++) {
+        var randIdx = getRandomInt(0, emptyCells.length);
+        var emptyCell = emptyCells[randIdx];
+        gBoard[emptyCell.i][emptyCell.j].isMine = true;
+        emptyCells.splice(randIdx, 1);
     }
 }
 
@@ -304,14 +305,14 @@ function revealMines() {
 function hint(elHint) {
     gCurrHint = elHint;
     gHintMode = true;
-    gCurrHint.innerText = '🗯';
+    gCurrHint.innerHTML = HINT_CLICKED;
 
 }
 
 function unHideHints() {
     for (var i = 1; i < 4; i++) {
         var elHint = document.querySelector(`.hint${i}`)
-        elHint.innerText = '💡';
+        elHint.innerHTML = HINT;
         elHint.classList.remove('hidden');
     }
 }
@@ -334,7 +335,7 @@ function resetTimer() {
 
 function showModal() {
     var elModal = document.querySelector('.modal');
-    elModal.innerText = (gVictory) ? 'victory!' : 'Game Over:(';
+    elModal.innerText = (gVictory) ? 'victory!' : 'Game Over';
     elModal.style.display = 'block';
 }
 

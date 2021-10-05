@@ -10,12 +10,13 @@
 </head>
 
 <body onload="init()" oncontextmenu="return false;">
-    <h2>Mine Sweeper</h2>
+    <h2><img class="logo" src="img/logo.png"></h2>
+
 
     <div class="lives">
-        lives: <span class="life life1">💙</span><span class="life life2">💙</span><span class="life life3">💙</span>
-        |<span onclick="hint(this)" class="hint hint1">💡</span><span onclick="hint(this)"
-            class="hint hint2">💡</span><span onclick="hint(this)" class="hint hint3">💡</span>
+        lives: <span class="life life1">💜</span><span class="life life2">💜</span><span class="life life3">💜</span>
+        |<span onclick="hint(this)" class="hint hint1"></span><span onclick="hint(this)"
+            class="hint hint2"></span><span onclick="hint(this)" class="hint hint3"></span>
         |<button class="safeclick" onclick="safeClick()">safe click<div class="available"></button>
         <div class="left" style="display: inline;"><span class="clicksleft"> 3 </span>left</div>
     </div>
@@ -31,11 +32,14 @@
 
         <div style="display: inline;" class="lives">
             <div class="board"></div>
-            <div class="modal"></div>
+            <div class="modal">
+            </div>
         </div>
 
-        <script src="js/main.js"></script>
-        <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/utils.js"></script>
+
+
 </body>
 <footer>
     <p style="color:gray"> &#169 Coffeerights- Einav Cohen</p>

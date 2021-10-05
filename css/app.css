@@ -6,32 +6,43 @@ body {
     width:100%;
     height: 100%;
     margin:0 auto;
-    background-color: lightgoldenrodyellow;
+    background: radial-gradient(circle, rgb(227, 224, 236) 0%, rgb(184, 171, 233) 100%);
 }
 h2 {
-    font-family: fantasy;
-    font-size: xx-large;
     text-align: center;
-    color: rgb(48, 224, 186);
     
 }
 
-div {
+.logo {
+    width: 300px;
+    height: 75px;
+
+}
+
+div {   
     width: 100%;
     height: 100%;
+
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    
+    
 }
 
 .lives {
-    font-family: 'Courier New', Courier, monospace;
+    font-family:monospace;
     text-align: center;
-    color: rgb(20, 66, 107);
-    margin-bottom: 10px;
+    color: rgb(3, 3, 3);
+    margin-bottom: 5px;
 }
 
 
 
 .hint {
-    margin-left: 2%;
+    margin-left: 1%;
     cursor: pointer;
 }
 
@@ -42,54 +53,64 @@ div {
 
 }
 .level{
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#837c7c;
+	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font: size 5 px;
+	padding:6px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
 
-   text-align: center;
-   border: none;
-   box-shadow: 2px 2px rgba(128, 128, 128, 0.678);
-   cursor: pointer;
+}
 
+.level:hover {
+    background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+
+.level:active {
+    position:relative;
+	top:1px;
 }
 
 .mood {
-    border: none;
-    padding: 5px;
+    border-radius: 100%;
     font-size: x-large;
-    background-color: aqua;
+    border: none;
+    background-color: rgb(229, 226, 240);
     cursor: pointer;
+
 }
 
+
+
 .timer{
-    font-family:'Courier New', Courier, monospace;
+    font-family:monospace;
     text-align: center;
     margin-bottom: 5px;
 
     
 }
 
-.timer span {
-    animation:blinkingText 1s infinite;
-  
-}
-  
-@keyframes blinkingText{
-    0%{     color: rgb(0, 0, 0);    }
-    49%{    color: rgb(0, 0, 0) }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: rgb(0, 0, 0);    }
-}
 
 
 table{
     margin: auto;
     background-color: white;
-    opacity: 0.8;
-    border: 1px solid rgb(164, 189, 135);
+    opacity: 0.7;
+    border: 1px solid rgb(165, 135, 189);
+    font-family:monospace
 }
 
 .cell {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     text-align: center;
     font-size: 1.5em;
     display: inline-block;
@@ -102,7 +123,8 @@ table{
 }
 
 .shown {
-    background-color: rgb(159, 252, 171);
+    color: black;
+    background-color: rgb(211, 170, 235);
 }
 
 p {
@@ -119,11 +141,11 @@ p {
 	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
 	background-color:#ededed;
 	border-radius:15px;
-	border:1px solid #d6bcd6;
+	border:1px solid #b0eff1;
 	display:inline-block;
 	cursor:pointer;
-	color:#3a8a9e;
-	font-family:Arial;
+	color:#bd8ff1;
+	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	font: size 10px;
 	padding:7px 15px;
 	text-decoration:none;
@@ -142,10 +164,12 @@ p {
 }
 
 .left {
+    color: rgb(158, 152, 152);
     font-family: monospace;
 }
 
 .safe {
+ 
     text-align:center;
     font-size: 24px;
     border-radius: 5px;
@@ -180,5 +204,31 @@ p {
     }
     100% {
            background-color: rgba(209, 83, 146,1)
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+.modal {
+    font-size: 25px;
+    color: #a983c2;
+    font-family: Impact, Charcoal, sans-serif;
+    text-shadow: 0px 0px 0 rgb(162, 239, 241),
+                    1px 1px 0 rgb(178, 247, 241),
+                    2px 2px 0 rgb(197, 243, 237),
+                    3px 3px 0 rgb(213, 236, 234),
+                    4px 4px 0 rgb(215, 235, 233),
+                    5px 5px  0 rgb(185, 136, 218),
+                    6px 6px 5px rgba(0,0,0,0.24),
+                    6px 6px 1px rgba(230, 215, 215, 0.5),
+                    0px 0px 5px rgba(0,0,0,.2);
+
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
     }
 }
