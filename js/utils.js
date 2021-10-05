@@ -4,8 +4,6 @@ function getRandomInt(min, max) {
 }
 
 
-
-
 function getCellCoord(strCellId) {
     var coord = {};
     var parts = strCellId.split('-'); // ['2','7']
@@ -15,8 +13,7 @@ function getCellCoord(strCellId) {
 }
 
 
-function renderCell(location, value) {
-    // Select the elCell and set the value
-    var elCell = document.querySelector(`.cell${location.i}-${location.j}`);
-    elCell.innerHTML = value;
+function renderCell(elCell, value) {
+    elCell.innerText = value;
+    elCell.classList.add('shown');
 }
