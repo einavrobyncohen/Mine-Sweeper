@@ -5,7 +5,7 @@ const EMPTY = ' '
 const NORMAL = '😃'
 const OISH = '🤯'
 const WIN = '😎'
-const HINT= '<img src="img/hint.png">'
+const HINT = '<img src="img/hint.png">'
 const HINT_CLICKED = '<img src="img/hintafter.png">'
 
 var gBoard;
@@ -57,8 +57,8 @@ function renderBoard(board) {
             var className = (cell.isShown) ? 'shown' : ' ';
             var id = i + '-' + j;
             strHTML += `<td class="cell ${className}" id= "${id}"
-        oncontextmenu=cellMarked(this)
-        onclick="cellClicked(this, ${i}, ${j})"></td>`;
+            oncontextmenu=cellMarked(this)
+            onclick="cellClicked(this, ${i}, ${j})"></td>`;
         }
         strHTML += '</tr>';
     }
@@ -102,7 +102,7 @@ function cellClicked(elCell, i, j) {
             }
 
             //MODEL
-            var mineCountAround = setMinesNegsCount(gBoard, i, j)
+            var mineCountAround = setMinesNegsCount(gBoard, i, j);
             gBoard[i][j].minesAroundCount = mineCountAround;
 
             //DOM
@@ -246,14 +246,14 @@ function isVictory(isVictory) {
         gVictory = true;
         gGame.isOn = false;
         changeMood();
-        playSound('victory')
+        playSound('victory');
         showModal();
         resetTimer();
     }
     else if (!isVictory) {
-        playSound('gameOver');
         gVictory = false;
         gGame.isOn = false;
+        playSound('gameOver');
         showModal();
         revealMines();
         resetTimer();
@@ -275,7 +275,7 @@ function setLevel(size) {
 function restartGame() {
     lifeBack();
     unHideHints();
-    gSafeClicks=3;
+    gSafeClicks = 3;
     editSafeClicks(gSafeClicks);
     resetTimer();
     closeModal();
@@ -382,7 +382,7 @@ function mineClicked(elCell) {
 function safeClick() {
     var emptyCells = getEmptyCells(gBoard);
 
-    if(!emptyCells.length) return;
+    if (!emptyCells.length) return;
     if (!gSafeClicks) return;
 
     gSafeClicks--;
