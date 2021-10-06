@@ -12,37 +12,46 @@
 <body onload="init()" oncontextmenu="return false;">
     <h2><img class="logo" src="img/logo.png"></h2>
 
-
-    <div class="lives">
-        lives: <span class="life life1">💜</span><span class="life life2">💜</span><span class="life life3">💜</span>
-        |<span onclick="hint(this)" class="hint hint1"></span><span onclick="hint(this)"
-            class="hint hint2"></span><span onclick="hint(this)" class="hint hint3"></span>
-        |<button class="safeclick" onclick="safeClick()">safe click<div class="available"></button>
-        <div class="left" style="display: inline;"><span class="clicksleft"> 3 </span>left</div>
+    <center>
+    <div>
+        <div class="lives" style="display: inline;">
+            lives: <span class="life life1">💜</span>
+            <span class="life life2">💜</span>
+            <span class="life life3">💜</span> |
+        </div>
+        <div style="display: inline;" class="hints">
+            <span onclick="hint(this)" class="hint hint1"></span>
+            <span onclick="hint(this)"class="hint hint2"></span>
+            <span onclick="hint(this)" class="hint hint3"></span> |
+        </div>
+        <button class="safeclick" onclick="safeClick()">safe click</button>
+        <div class="left" style="display: inline;">
+            <span class="clicksleft"> 3 </span>left</div>
     </div>
 
     <div class="timer">
-        Timer: <span>0</span>
+        〖TIMER: <span>0</span>〗
+    </div>
 
-        <div class="levels">
-            <button class="level button1" onclick="setLevel(4)">Beginner</button>
-            <button class="level button2" onclick="setLevel(8)">Medium</button>
-            <button class="level button3" onclick="setLevel(12)">Expert</button>
-        </div>
+    <div class="levels">
+        <button class="level button1" onclick="setLevel(4)">Beginner</button>
+        <button class="level button2" onclick="setLevel(8)"> Medium</button>
+        <button class="level button3" onclick="setLevel(12)">Expert</button>
+        <button class="diy" onclick="manuallyCreate()">create your own!</button>
+    </div>
+    
+    <div class="board"></div>
 
-        <div style="display: inline;" class="lives">
-            <div class="board"></div>
-            <div class="modal">
-            </div>
-        </div>
+    <div class="modal">
+
+    </center>
 
     <script src="js/main.js"></script>
     <script src="js/utils.js"></script>
 
-
 </body>
 <footer>
-    <p style="color:gray"> &#169 Coffeerights- Einav Cohen</p>
+    <p style="color:gray"> &#169 Coffeerights- Einav Robyn Cohen</p>
 </footer>
 
 </html>

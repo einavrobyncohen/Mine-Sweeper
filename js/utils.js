@@ -14,9 +14,14 @@ function getCellCoord(strCellId) {
 }
 
 function renderCell(elCell, value) {
-    elCell.innerText = value;
+    if (value === MINE_IMG) {
+        elCell.innerHTML = MINE_IMG;
+    } else {
+        elCell.innerText = value;
+    }
     elCell.classList.add('shown');
 }
+
 
 function getEmptyCells(board) {
     var emptyCells = [];
