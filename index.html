@@ -13,36 +13,37 @@
     <h2><img class="logo" src="img/logo.png"></h2>
 
     <center>
-    <div>
-        <div class="lives" style="display: inline;">
-            lives: <span class="life life1">💜</span>
-            <span class="life life2">💜</span>
-            <span class="life life3">💜</span> |
+        <div>
+            <div class="lives" style="display: inline;">
+                lives: <span class="life life1">💜</span>
+                <span class="life life2">💜</span>
+                <span class="life life3">💜</span> |
+            </div>
+            <div style="display: inline;" class="hints">
+                <span onclick="hint(this)" class="hint hint1"></span>
+                <span onclick="hint(this)" class="hint hint2"></span>
+                <span onclick="hint(this)" class="hint hint3"></span> |
+            </div>
+            <button class="safeclick" onclick="safeClick()">safe click</button>
+            <div class="left" style="display: inline;">
+                <span class="clicksleft"> 3 </span>left
+            </div>
         </div>
-        <div style="display: inline;" class="hints">
-            <span onclick="hint(this)" class="hint hint1"></span>
-            <span onclick="hint(this)"class="hint hint2"></span>
-            <span onclick="hint(this)" class="hint hint3"></span> |
+
+        <div class="timer">
+            〖TIMER: <span>0</span>〗
         </div>
-        <button class="safeclick" onclick="safeClick()">safe click</button>
-        <div class="left" style="display: inline;">
-            <span class="clicksleft"> 3 </span>left</div>
-    </div>
 
-    <div class="timer">
-        〖TIMER: <span>0</span>〗
-    </div>
+        <div class="levels">
+            <button class="level button1" onclick="setLevel(4)">Beginner</button>
+            <button class="level button2" onclick="setLevel(8)"> Medium</button>
+            <button class="level button3" onclick="setLevel(12)">Expert</button>
+            <button class="diy" onclick="manuallyCreate()">create your own!</button>
+        </div>
 
-    <div class="levels">
-        <button class="level button1" onclick="setLevel(4)">Beginner</button>
-        <button class="level button2" onclick="setLevel(8)"> Medium</button>
-        <button class="level button3" onclick="setLevel(12)">Expert</button>
-        <button class="diy" onclick="manuallyCreate()">create your own!</button>
-    </div>
-    
-    <div class="board"></div>
+        <div class="board"></div>
 
-    <div class="modal">
+        <div class="modal">
 
     </center>
 
